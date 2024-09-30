@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="/js/script.js">
+    </script>: 
+    <title>Titulo da página 2</title>
+</head>
+<body>
+    <p id="id1">Paragrafo de teste</p>
+    <h1> Título 1</h1>
+        
+        <br>
+        <hr>
+        <strong>Teste strong</strong>
+        <em>Teste em </em>
+        <b>Teste b</b>
+        <i>Teste i</i>
+        <a href="http://www.google.com.br">Google</a>
+
+        <img src="if.png" height="200" width="300" alt="Imagem do logotipo do Instituto Federal">
+
+
+        <ul>
+            <li> Item da lista.</li>
+            <li>Item 2</li>
+        </ul>
+
+        <ol>
+            <li> Item da lista.</li>
+            <li>Item 2</li>
+        </ol>
+
+        <h2>Formulário de Cadastro</h2>
+    
+    <form action="processar.php" method="POST">
+        <!-- Nome completo -->
+        <label for="nome">Nome Completo:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+        
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <!-- Senha -->
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha" required><br><br>
+        
+        <!-- Gênero -->
+        <label for="genero">Gênero:</label><br>
+        <select id="genero" name="genero">
+            <option value="m">Masculino</option>
+            <option value="f">Feminino</option>
+            <option value="o">Outro</option>
+            <option value="n">Prefiro não dizer</option>
+        </select><br><br>
+
+        <!-- Comentário -->
+        <label for="comentario">Comentário:</label><br>
+        <textarea id="comentario" name="comentario" rows="7" cols="50"></textarea><br><br>
+
+        <!-- Aceitar termos -->
+        <input type="checkbox" id="termos" name="termos" required>
+        <label for="termos">Aceito os termos e condições</label><br><br>
+
+        <!-- Botão de envio -->
+        <input type="submit" value="Enviar dados">
+    </form>
+
+<h2>Tabela de Exemplo</h2>
+    
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Profissão</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>João Silva</td>
+            <td>28</td>
+            <td>Engenheiro</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ana Santos</td>
+            <td>34</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Pedro Costa</td>
+            <td>22</td>
+            <td>Estudante</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Maria Oliveira</td>
+            <td>29</td>
+            <td>Advogada</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Carlos Pereira</td>
+            <td>40</td>
+            <td>Professor</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Exemplo de Áudio</h2>
+    
+<!-- Áudio com controles -->
+<audio controls>
+    <source src="audio-exemplo.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<h2>Exemplo de Vídeo</h2>
+
+<!-- Vídeo com controles -->
+<video controls width="320" height="240">
+    <source src="video-exemplo.mp4" type="video/mp4">
+    Seu navegador não suporta o elemento de vídeo.
+</video>
+
+<h2>Vídeo do YouTube Incorporado</h2>
+
+
+
+<div class="video-container">
+    <iframe width="679" height="382" src="https://www.youtube.com/embed/U5Bc1PiNlmo" title="JIFSC 2019 | Futsal masculino | Caçador x Gaspar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<iframe width="732" height="412" src="https://www.youtube.com/embed/rj25APQ2TyU" title="Scorpions, Aerosmith, ACDC, Queen, Nirvana, Bon Jovi, U2, GNR 🔥 Classic Rock 70s 80s 90s Full Album" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+    </body>
+</html>
