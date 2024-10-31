@@ -1,9 +1,6 @@
 <?php
-
     require '../../actions/produto.php';
-
     $listaProdutos = consultarProdutos();
-
 ?>
 
 <!doctype html>
@@ -11,35 +8,25 @@
 
 <head>
     <title>Listar Produtos</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-
     <link rel="stylesheet" href="../../../css/produto.css">
-
 </head>
 
 <body>
-
     <div class="container">
-
         <div class="row d-flex justify-content-between align-items-center ">
             <h1>Lista de Produtos</h1>
-
             <a href="./inserirProduto.php" class="btn btn-primary">
                 <i class="bi bi-plus-square"></i>
                 <span>Novo Produto</span>
             </a>
         </div>
-
         <div class="row">
-
             <table class="table">
                 <thead>
                     <tr>
@@ -73,16 +60,11 @@
                                 </button>
                             </form>
                         </td>
-
                     </tr>
                     <?php } ?>
                 </tbody>
             </table>
-
-
         </div>
-
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -95,5 +77,4 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 </body>
-
 </html>

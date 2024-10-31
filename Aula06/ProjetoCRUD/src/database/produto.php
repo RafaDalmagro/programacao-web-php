@@ -1,6 +1,4 @@
 <?php
-
-
     function consultarProdutosBD($conexao){
         $buscar_produtos = 'select * from produto';
         $query_produtos = mysqli_query($conexao, $buscar_produtos);
@@ -10,7 +8,6 @@
         mysqli_close($conexao);
 
         return $listaProdutos;
-
     }
 
     function consultarProdutoByIdBD($conexao, $id_produto){
