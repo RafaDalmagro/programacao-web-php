@@ -19,7 +19,6 @@
         mysqli_close($conexao);
 
         return $produto;
-
     }
 
     function cadastrarProdutoBD($conexao, $nome, $descricao, $quantidade, $preco){
@@ -55,5 +54,4 @@
             return false;
         }
     }
-
 ?>
