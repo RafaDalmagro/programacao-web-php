@@ -1,8 +1,21 @@
+<?php
+
+require '../../actions/produto.php';
+
+// capturar a informação que veio via URL 'id_produto'
+if(isset($_GET['id_produto'])){
+    $id_produto = $_GET['id_produto'];
+
+    $produto = consultarProdutoById($id_produto); // método de actions
+}
+
+?>
+
 <!doctype html>
 <html lang="pt-br">
 
 <head>
-    <title>Cadastrar Produto</title>
+    <title>Editar Produto</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,41 +29,47 @@
 </head>
 
 <body>
-
     <div class="container">
         <div class="row">
-            <h1>Cadastro de Produto</h1>
+            <h1>Edição de Produto</h1>
         </div>
 
-        
         <form action="../../actions/produto.php" method="post">
+
+            <div class="form-group">               
+                <input type="number" class="form-control" name="id_produto" id="id_produto" 
+                value=<?php echo $produto['id_produto']?> hidden>
+            </div>
 
             <div class="form-group">
                 <label for="nome">Nome Produto:</label>
-                <input type="text" class="form-control" name="nome" id="nome" placeholder="Informe o nome do produto">
+                <input type="text" class="form-control" name="nome" id="nome" placeholder="Informe o nome do produto"
+                value='<?php echo $produto['nome']?>'>
             </div>
 
             <div class="form-group">
                 <label for="descricao">Descrição Produto:</label>
                 <input type="text" class="form-control" name="descricao" id="descricao"
-                    placeholder="Informe a descrição do produto">
+                    placeholder="Informe a descrição do produto"
+                    value='<?php echo $produto['descricao']?>'>
             </div>
 
             <div class="form-group">
                 <label for="quantidade">Quantidade Produto:</label>
                 <input type="number" class="form-control" name="quantidade" id="quantidade"
-                    placeholder="Informe a quantidade do produto">
+                    placeholder="Informe a quantidade do produto"
+                    value=<?php echo $produto['quantidade']?>>
             </div>
 
             <div class="form-group">
                 <label for="preco">Preço Produto:</label>
-                <input type="number" class="form-control" name="preco" id="preco" placeholder="0.00" step="0.01"
-                    min="0">
+                <input type="number" class="form-control" name="preco" id="preco" placeholder="0.00" step="0.01"                    min="0"
+                    value=<?php echo $produto['preco']?>>
             </div>
 
             <div class="form-group">
-                <button type="reset" name="limpar" class="btn btn-secondary">Limpar</button>
-                <button type="submit" name="inserir" class="btn btn-primary">Cadastrar</button>
+                <a href="./listarProduto.php" class="btn btn-secondary">Cancelar</a>
+                <button type="submit" name="editar" class="btn btn-primary">Salvar Alterações</button>
             </div>
 
 
