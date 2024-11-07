@@ -1,9 +1,6 @@
 <?php
-
-require '../../actions/usuario.php';
-
-    $listaUsuarios = consultarProdutos();
-
+    require '../../actions/usuario.php';
+    $listaUsuarios = consultarUsuarios();
 ?>
 
 <!doctype html>
@@ -21,7 +18,7 @@ require '../../actions/usuario.php';
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="../../../css/produto.css">
+    <link rel="stylesheet" href="../../../css/usuario.css">
 
 </head>
 
@@ -30,11 +27,11 @@ require '../../actions/usuario.php';
     <div class="container">
 
         <div class="row d-flex justify-content-between align-items-center ">
-            <h1>Lista de Produtos</h1>
+            <h1>Lista de Usuarios</h1>
 
-            <a href="./inserirProduto.php" class="btn btn-primary">
+            <a href="./inserirUsuario.php" class="btn btn-primary">
                 <i class="bi bi-plus-square"></i>
-                <span>Novo Produto</span>
+                <span>Novo usuario</span>
             </a>
         </div>
 
@@ -43,32 +40,32 @@ require '../../actions/usuario.php';
             <table class="table">
                 <thead>
                     <tr>
-                        <th>ID PRODUTO</th>
+                        <th>ID USUARIO</th>
                         <th>NOME</th>
-                        <th>DESCRIÇÃO</th>
-                        <th>QUANTIDADE</th>
-                        <th>PREÇO</th>
+                        <th>EMAIL</th>
+                        <th>TELEFONE</th>
+                        <th>ENDEREÇO</th>
                         <th>DATA DE REGISTRO</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($listaProdutos as $produto) { ?>
+                    <?php foreach($listaUsuarios as $usuario) { ?>
                     <tr>
-                        <td scope="row"> <?php echo $produto['id_produto'] ?> </td>
-                        <td> <?php echo $produto['nome'] ?> </td>
-                        <td> <?php echo $produto['descricao'] ?> </td>
-                        <td> <?php echo $produto['quantidade'] ?> </td>
-                        <td> <?php echo $produto['preco'] ?> </td>
-                        <td> <?php echo $produto['data_registro'] ?> </td>
+                        <td scope="row"> <?php echo $usuario['id_usuario'] ?> </td>
+                        <td> <?php echo $usuario['nome'] ?> </td>
+                        <td> <?php echo $usuario['email'] ?> </td>
+                        <td> <?php echo $usuario['telefone'] ?> </td>
+                        <td> <?php echo $usuario['endereco'] ?> </td>
+                        <td> <?php echo $usuario['data_registro'] ?> </td>
                         <td>
-                            <a class="btn btn-primary" href="./editarProduto.php?id_produto=<?php echo $produto['id_produto'] ?>">
+                            <a class="btn btn-primary" href="./editarUsuario.php?id_usuario=<?php echo $usuario['id_usuario'] ?>">
                             <i class="bi bi-pencil-square"></i>
                         </a>
                         </td>
                         <td>
-                            <form action="../../actions/produto.php" method="post">
-                                <input type="number" name="id_produto" id="id_produto" value=<?php echo $produto['id_produto'] ?> hidden>
-                                <button type="submit" name="excluir" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir produto?')">
+                            <form action="../../actions/usuario.php" method="post">
+                                <input type="number" name="id_usuario" id="id_usuario" value=<?php echo $usuario['id_usuario'] ?> hidden>
+                                <button type="submit" name="excluir" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir usuario?')">
                                     <i class="bi bi-trash"></i>
                                 </button>
                             </form>

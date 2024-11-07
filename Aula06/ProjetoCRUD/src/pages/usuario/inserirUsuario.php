@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Cadastrar Produto</title>
+    <title>Cadastrar Usuário</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,33 +19,28 @@
 
     <div class="container">
         <div class="row">
-            <h1>Cadastro de Produto</h1>
+            <h1>Cadastro de Usuário</h1>
         </div>
 
-        
-        <form action="../../actions/produto.php" method="post">
-
+        <form action="../../actions/usuario.php" method="post">
             <div class="form-group">
-                <label for="nome">Nome Produto:</label>
-                <input type="text" class="form-control" name="nome" id="nome" placeholder="Informe o nome do produto">
+                <label for="nome">Nome do Usuário:</label>
+                <input type="text" class="form-control" name="nome" id="nome" placeholder="Informe o nome completo do usuário">
             </div>
 
             <div class="form-group">
-                <label for="descricao">Descrição Produto:</label>
-                <input type="text" class="form-control" name="descricao" id="descricao"
-                    placeholder="Informe a descrição do produto">
+                <label for="email">E-mail do usuário:</label>
+                <input type="email" class="form-control" name="email" id="email"placeholder="Informe seu e-mail">
             </div>
 
             <div class="form-group">
-                <label for="quantidade">Quantidade Produto:</label>
-                <input type="number" class="form-control" name="quantidade" id="quantidade"
-                    placeholder="Informe a quantidade do produto">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" class="form-control" name="telefone" id="telefone" placeholder="Informe seu número de telefone">
             </div>
 
             <div class="form-group">
-                <label for="preco">Preço Produto:</label>
-                <input type="number" class="form-control" name="preco" id="preco" placeholder="0.00" step="0.01"
-                    min="0">
+                <label for="endereco">Endereço:</label>
+                <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Informe seu endereço">
             </div>
 
             <div class="form-group">
