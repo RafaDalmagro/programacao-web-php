@@ -7,26 +7,36 @@
         return consultarUsuariosBD($conexao);
     }
 
-    function consultarProdutoById($id_usuario){  
+    function consultarUsuarioById($id_usuario){  
         global $conexao;          
-        return consultarProdutoByIdBD($conexao, $id_usuario);
+        return consultarUsuarioByIdBD($conexao, $id_usuario);
     }
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-        $id_produto = $_POST['id_usuario'];
+        $id_usuario = $_POST['id_usuario'];
         $nome = $_POST['nome'];
         $email = $_POST['email'];
-        $senha = $_POST['senha'];
-        $telefone = $_POST['telefone'];
         $endereco = $_POST['endereco'];
+        
+        $senha = $_POST['senha'];
+        $senhaHashada = password_hash($senha, PASSWORD_DEFAULT);
+        
+        $telefone = $_POST['telefone'];
+        $telefone = $_POST['telefone'];
+        $telefone = preg_replace('/\D/', '', $telefone);
+        if (strlen($telefone) === 11) {
+            $telefone = preg_replace('/(\d{2})(\d{5})(\d{4})/', '($1) $2-$3', $telefone);
+        } elseif (strlen($telefone) === 10) {
+            $telefone = preg_replace('/(\d{2})(\d{4})(\d{4})/', '($1) $2-$3', $telefone);
+        }
+
 
         if(isset($_POST['inserir'])){
-            if(cadastrarUsuarioBD($conexao, $nome, $email, $senha, $telefone, $endereco)){
+            if(cadastrarUsuarioBD($conexao, $nome, $email, $senhaHashada, $telefone, $endereco)){
                 header('location:../pages/usuario/listarUsuario.php');  
             }
         } else if(isset($_POST['editar'])){
-            if(editarUsuarioBD($conexao, $id_usuario, $nome, $email, $senha, $telefone, $endereco)){
+            if(editarUsuarioBD($conexao, $id_usuario, $nome, $email, $telefone, $endereco)){
                 header('location:../pages/usuario/listarUsuario.php');  
             }
         } else if(isset($_POST['excluir'])){

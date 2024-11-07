@@ -36,8 +36,7 @@
         </div>
 
         <div class="row">
-            
-            <table class="table">
+            <table class="table bg-warning">
                 <thead>
                     <tr>
                         <th>ID PRODUTO</th>
