@@ -1,0 +1,18 @@
+CREATE TABLE Categoria (
+    id_categoria INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    descricao VARCHAR(255),
+    data_registro DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO Categoria (nome, descricao) VALUES 
+('Eletrônicos', 'Produtos relacionados a dispositivos eletrônicos'),
+('Móveis', 'Itens de mobiliário para casa e escritório'),
+('Vestuário', 'Roupas e acessórios para todas as idades'),
+('Alimentos', 'Produtos alimentícios e bebidas'),
+('Livros', 'Literatura e materiais de estudo'),
+('Beleza', 'Produtos de beleza e cuidados pessoais'),
+('Esportes', 'Equipamentos e acessórios esportivos'),
+('Ferramentas', 'Ferramentas e itens de construção'),
+('Brinquedos', 'Brinquedos e jogos para crianças'),
+('Papelaria', 'Artigos de papelaria e escritório');
