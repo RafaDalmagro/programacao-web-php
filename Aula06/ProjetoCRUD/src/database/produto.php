@@ -1,6 +1,6 @@
 <?php
     function consultarProdutosBD($conexao){
-        $buscar_produtos = 'select * from produto';
+        $buscar_produtos = "SELECT p.id_produto, p.nome, p.descricao, p.quantidade, p.preco, p.data_registro, c.nome AS categoria FROM Produto p LEFT JOIN Categoria c ON p.id_categoria = c.id_categoria";
         $query_produtos = mysqli_query($conexao, $buscar_produtos);
 
         $listaProdutos = mysqli_fetch_all($query_produtos, MYSQLI_ASSOC);

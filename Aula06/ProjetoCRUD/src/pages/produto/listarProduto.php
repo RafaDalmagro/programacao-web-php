@@ -1,6 +1,9 @@
 <?php
     require '../../actions/produto.php';
     $listaProdutos = consultarProdutos();
+
+    require '../../actions/categoria.php';
+    $listaCategorias = consultarCategorias();
 ?>
 
 <!doctype html>
@@ -8,24 +11,16 @@
 
 <head>
     <title>Listar Produtos</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../../css/produto.css">
-
 </head>
 
 <body>
-
     <div class="container">
-
         <div class="row d-flex justify-content-between align-items-center ">
             <h1>Lista de Produtos</h1>
 
@@ -44,7 +39,9 @@
                         <th>DESCRIÇÃO</th>
                         <th>QUANTIDADE</th>
                         <th>PREÇO</th>
+                        <th>CATEGORIA</th>
                         <th>DATA DE REGISTRO</th>
+                        <th>AÇÕES</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,6 +52,7 @@
                         <td> <?php echo $produto['descricao'] ?> </td>
                         <td> <?php echo $produto['quantidade'] ?> </td>
                         <td> <?php echo $produto['preco'] ?> </td>
+                        <td> <?php echo $produto['categoria'] ?> </td>
                         <td> <?php echo $produto['data_registro'] ?> </td>
                         <td>
                             <a class="btn btn-primary" href="./editarProduto.php?id_produto=<?php echo $produto['id_produto'] ?>">

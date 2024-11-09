@@ -18,13 +18,14 @@
         $descricao = $_POST['descricao'];
         $quantidade = $_POST['quantidade'];
         $preco = $_POST['preco'];
+        $id_categoria = $_POST['id_categoria'];
 
         if(isset($_POST['inserir'])){
-            if(cadastrarProdutoBD($conexao, $nome, $descricao, $quantidade, $preco)){
+            if(cadastrarProdutoBD($conexao, $nome, $descricao, $quantidade, $preco, $id_categoria)){
               header('location:../pages/produto/listarProduto.php');  
             }
         } else if(isset($_POST['editar'])){
-            if(editarProdutoBD($conexao, $id_produto, $nome, $descricao, $quantidade, $preco)){
+            if(editarProdutoBD($conexao, $id_produto, $nome, $descricao, $quantidade, $preco, $id_categoria)){
               header('location:../pages/produto/listarProduto.php');  
             }
         } else if(isset($_POST['excluir'])){
