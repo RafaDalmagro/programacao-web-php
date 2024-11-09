@@ -18,7 +18,7 @@
     }
 
     function cadastrarCategoriaBD($conexao, $nome, $descricao){
-        $inserir_categoria = "INSERT INTO categoria (nome, decricao ) VALUES ('$nome', '$descricao')";
+        $inserir_categoria = "INSERT INTO categoria (nome, descricao) VALUES ('$nome', '$descricao')";
         $query_categoria = mysqli_query($conexao, $inserir_categoria);
 
         if($query_categoria){
