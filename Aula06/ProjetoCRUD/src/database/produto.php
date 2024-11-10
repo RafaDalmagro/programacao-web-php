@@ -33,18 +33,18 @@
         }
     }
 
-    function editarProdutoBD($conexao, $id_produto, $nome, $descricao, $quantidade, $preco){
-        $editar_produto = "UPDATE produto SET nome='$nome', descricao='$descricao', quantidade = $quantidade, preco=$preco, data_registro=NOW()
-        where id_produto = $id_produto";
-        $query_produto = mysqli_query($conexao, $editar_produto);
+    function editarProdutoBD($conexao, $id_produto, $nome, $descricao, $quantidade, $preco, $id_categoria) {
 
-        if($query_produto){
+        $editar_produto = "UPDATE produto SET nome = '$nome', descricao = '$descricao', quantidade = $quantidade, preco = $preco,  id_categoria = $id_categoria, data_registro = NOW() WHERE id_produto = $id_produto";
+        $query_produto = mysqli_query($conexao, $editar_produto);
+    
+        if ($query_produto) {
             return true;
         } else { 
             return false;
         }
     }
-
+    
     function excluirProdutoBD($conexao, $id_produto){
         $excluir_produto = "delete from produto where id_produto =$id_produto";
         $query_produto = mysqli_query($conexao, $excluir_produto);

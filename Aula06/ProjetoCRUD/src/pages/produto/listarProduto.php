@@ -1,9 +1,6 @@
 <?php
     require '../../actions/produto.php';
     $listaProdutos = consultarProdutos();
-
-    require '../../actions/categoria.php';
-    $listaCategorias = consultarCategorias();
 ?>
 
 <!doctype html>

@@ -18,7 +18,7 @@
         $descricao = $_POST['descricao'];
         $quantidade = $_POST['quantidade'];
         $preco = $_POST['preco'];
-        $id_categoria = $_POST['id_categoria'];
+        $id_categoria = isset($_POST['id_categoria']) ? $_POST['id_categoria'] : 1;
 
         if(isset($_POST['inserir'])){
             if(cadastrarProdutoBD($conexao, $nome, $descricao, $quantidade, $preco, $id_categoria)){
