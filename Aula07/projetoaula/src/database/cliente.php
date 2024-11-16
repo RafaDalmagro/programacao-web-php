@@ -47,8 +47,6 @@ function editarClienteBD( $conexao, $idCliente, $nome, $email, $senha, $telefone
         data_registro = NOW()
     WHERE id_cliente = $idCliente";
 
-    echo $alterarCliente;
-
     $query_cliente = mysqli_query( $conexao, $alterarCliente );
 
     if ( $query_cliente ) {

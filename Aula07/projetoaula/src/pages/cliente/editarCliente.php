@@ -1,17 +1,14 @@
 <?php
+    require '../../actions/cliente.php';
 
-require '../../actions/cliente.php';
+    if ( session_status() == PHP_SESSION_NONE ) {
+        session_start();
+    }
 
-if ( session_status() == PHP_SESSION_NONE ) {
-    session_start();
-}
-
-if ( isset( $_GET[ 'id' ] ) ) {
-    $idCliente = $_GET[ 'id' ];
-}
-
-$cliente = consultarClienteById( $idCliente );
-
+    if ( isset( $_GET[ 'id_cliente' ] ) ) {
+        $idCliente = $_GET[ 'id_cliente' ];
+    }
+    $cliente = consultarClienteById( $idCliente );
 ?>
 
 <!doctype html>

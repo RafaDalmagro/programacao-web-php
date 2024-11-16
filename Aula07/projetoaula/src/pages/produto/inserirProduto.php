@@ -12,7 +12,6 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-
 </head>
 
 <body>
@@ -21,7 +20,6 @@
         <div class="row">
             <h1>Cadastro de Produto</h1>
         </div>
-
 
         <form action="../../actions/produto.php" method="post">
 

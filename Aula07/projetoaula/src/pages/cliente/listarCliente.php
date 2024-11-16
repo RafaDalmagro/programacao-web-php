@@ -1,19 +1,13 @@
-<!-- sigla b4-->
-
 <?php   
-
     if (session_status() == PHP_SESSION_NONE) {
-        // Inicia uma nova sessão,
-        //pois não há nenhuma ativa
+
         session_start(); 
     }
 
     require '../../../conexao.php';
     require '../../../src/actions/cliente.php';
 
-
     $clientes = consultarClientes();
-
 ?>
 
 <!doctype html>

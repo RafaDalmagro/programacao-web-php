@@ -16,7 +16,7 @@
         $id_produto = $_POST['id_produto'];
         $nome = $_POST['nome'];
         $descricao = $_POST['descricao'];
-        $quantidade = $_POST['quantidade'];
+        $quantidade = $_POST['qtde_estoque'];
         $preco = $_POST['preco'];
         $id_categoria = isset($_POST['id_categoria']) ? $_POST['id_categoria'] : 1;
 

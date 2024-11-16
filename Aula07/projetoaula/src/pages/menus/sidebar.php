@@ -11,7 +11,6 @@
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
                 <a href="#" class="nav-link active" aria-current="page">
-
                     <span>Home</span>
                 </a>
             </li>

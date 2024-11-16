@@ -1,6 +1,6 @@
 <?php
-    require $_SERVER['DOCUMENT_ROOT'] .'/PHP/Aula06/ProjetoCRUD/conexao.php';
-    require $_SERVER['DOCUMENT_ROOT'] .'/PHP/Aula06/ProjetoCRUD//src/database/categoria.php';
+    require $_SERVER['DOCUMENT_ROOT'] .'/PHP/Aula07/projetoaula/conexao.php';
+    require $_SERVER['DOCUMENT_ROOT'] .'/PHP/Aula07/projetoaula/src/database/categoria.php';
 
     function consultarCategorias(){     
         global $conexao;      

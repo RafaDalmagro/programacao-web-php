@@ -1,6 +1,6 @@
 <?php
-require $_SERVER[ 'DOCUMENT_ROOT' ] .'/projetoaula/conexao.php';
-require $_SERVER[ 'DOCUMENT_ROOT' ] .'/projetoaula/src/database/produto.php';
+require $_SERVER[ 'DOCUMENT_ROOT' ] .'/PHP/Aula07/projetoaula/conexao.php';
+require $_SERVER[ 'DOCUMENT_ROOT' ] .'/PHP/Aula07/projetoaula/src/database/produto.php';
 
 if ( session_status() == PHP_SESSION_NONE ) {
     session_start();
@@ -21,7 +21,7 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' ) {
     $id_produto = $_POST[ 'id_produto' ];
     $nome = $_POST[ 'nome' ];
     $descricao = $_POST[ 'descricao' ];
-    $quantidade = $_POST[ 'quantidade' ];
+    $quantidade = $_POST[ 'qtde_estoque' ];
     $preco = $_POST[ 'preco' ];
 
     if ( isset( $_POST[ 'inserir' ] ) ) {

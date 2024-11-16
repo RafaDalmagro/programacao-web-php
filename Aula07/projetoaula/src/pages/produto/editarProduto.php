@@ -1,14 +1,11 @@
 <?php
+    require '../../actions/produto.php';
 
-require '../../actions/produto.php';
+    if ( isset( $_GET[ 'id_produto' ] ) ) {
+        $idProduto = $_GET[ 'id_produto' ];
 
-if ( isset( $_GET[ 'id_produto' ] ) ) {
-    $idProduto = $_GET[ 'id_produto' ];
-
-    $produto = consultarProdutoById( $idProduto );
-
-}
-
+        $produto = consultarProdutoById( $idProduto );
+    }
 ?>
 
 <!doctype html>
@@ -38,14 +35,12 @@ if ( isset( $_GET[ 'id_produto' ] ) ) {
         <form action='../../actions/produto.php' method='post'>
 
             <div class='form-group'>
-                <input type='text' class='form-control' name='id_produto' id='id_produto'
-                    value=<?php echo $produto[ 'id_produto' ]?> hidden>
+                <input type='text' class='form-control' name='id_produto' id='id_produto' value=<?php echo $produto[ 'id_produto' ]?> hidden>
             </div>
 
             <div class='form-group'>
                 <label for='nome'>Nome Produto:</label>
-                <input type='text' class='form-control' name='nome' id='nome' placeholder='Informe o nome do produto'
-                    value=<?php echo $produto[ 'nome' ]?>>
+                <input type='text' class='form-control' name='nome' id='nome' placeholder='Informe o nome do produto' value=<?php echo $produto[ 'nome' ]?>>
             </div>
 
             <div class='form-group'>
