@@ -1,0 +1,30 @@
+CREATE TABLE Produto (
+    id_produto INT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    descricao TEXT,
+    qtd_estoque INT NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL
+);
+
+-- Inserindo 20 registros de exemplo
+INSERT INTO Produto (id_produto, nome, descricao, qtd_estoque, preco) VALUES 
+(1, 'Produto 1', 'Descrição do produto 1', 10, 15.50),
+(2, 'Produto 2', 'Descrição do produto 2', 20, 25.00),
+(3, 'Produto 3', 'Descrição do produto 3', 15, 30.75),
+(4, 'Produto 4', 'Descrição do produto 4', 12, 5.99),
+(5, 'Produto 5', 'Descrição do produto 5', 8, 10.20),
+(6, 'Produto 6', 'Descrição do produto 6', 18, 22.80),
+(7, 'Produto 7', 'Descrição do produto 7', 5, 18.00),
+(8, 'Produto 8', 'Descrição do produto 8', 30, 3.50),
+(9, 'Produto 9', 'Descrição do produto 9', 25, 7.99),
+(10, 'Produto 10', 'Descrição do produto 10', 10, 19.99),
+(11, 'Produto 11', 'Descrição do produto 11', 14, 45.50),
+(12, 'Produto 12', 'Descrição do produto 12', 16, 8.25),
+(13, 'Produto 13', 'Descrição do produto 13', 22, 13.45),
+(14, 'Produto 14', 'Descrição do produto 14', 6, 50.00),
+(15, 'Produto 15', 'Descrição do produto 15', 40, 2.99),
+(16, 'Produto 16', 'Descrição do produto 16', 35, 9.95),
+(17, 'Produto 17', 'Descrição do produto 17', 17, 28.70),
+(18, 'Produto 18', 'Descrição do produto 18', 7, 11.60),
+(19, 'Produto 19', 'Descrição do produto 19', 20, 6.80),
+(20, 'Produto 20', 'Descrição do produto 20', 50, 4.25);

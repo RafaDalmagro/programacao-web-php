@@ -4,8 +4,8 @@ if ( session_status() == PHP_SESSION_NONE ) {
     session_start();
 }
 
-require $_SERVER[ 'DOCUMENT_ROOT' ] .'/projetoaula/conexao.php';
-require $_SERVER[ 'DOCUMENT_ROOT' ] .'/projetoaula/src/database/cliente.php';
+require $_SERVER[ 'DOCUMENT_ROOT' ] .'/PHP/Aula07/projetoaula/conexao.php';
+require $_SERVER[ 'DOCUMENT_ROOT' ] .'/PHP/Aula07/projetoaula/src/database/cliente.php';
 
 function consultarClientes() {
     global $conexao;
