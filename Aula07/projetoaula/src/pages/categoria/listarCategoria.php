@@ -14,10 +14,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../../../css/categoria.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <link rel="stylesheet" href="../../../css/style.css">
 </head>
 
 <body>
+<div class="d-flex">
+        <?php include('../menus/sidebar.php')?>
+        <div class="container-fluid"></div>
+    </div>
+    
     <div class="container">
         <div class="row d-flex justify-content-between align-items-center">
             <h1>Lista de Categorias</h1>
@@ -29,7 +35,7 @@
         </div>
 
         <div class="row">
-            <table class="table bg-success">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>ID CATEGORIA</th>

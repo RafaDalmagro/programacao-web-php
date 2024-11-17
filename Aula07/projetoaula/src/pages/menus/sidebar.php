@@ -1,50 +1,40 @@
 <aside>
     <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
-
         <div class="user">
             <div class="img-user">
-                <img src="../../../img/user.png" alt="User image">
+                <img src="../../../img/Avatar.png" alt="User image">
             </div>
-            <span class=" fs-4">User</span>
+            <span class="fs-4">Rafael</span>
         </div>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="#" class="nav-link active" aria-current="page">
-                    <span>Home</span>
+                <a href="../../../index.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'index.php') ? 'active' : ''; ?>" aria-current="page">
+                    <span>Inicio</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white">
-
-                    <span>Dashboard</span>
+                <a href="../produto/listarProduto.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'listarProduto.php') ? 'active' : ''; ?>">
+                    <span>Produto</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white">
-                    <span>Orders</span>
+                <a href="../categoria/listarCategoria.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'listarCategoria.php') ? 'active' : ''; ?>">
+                    <span>Categoria</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white">
-                    
-                    <span>Products</span>
+                <a href="../cliente/listarCliente.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'listarCliente.php') ? 'active' : ''; ?>">
+                    <span>Clientes</span>
                 </a>
             </li>
-            <li>
-                <a href="#" class="nav-link text-white">
-                    <span>Customers</span>
-                </a>
-            </li>
-
         </ul>
         <hr class="line">
         <div class="last-item">
             <a href="#" class="nav-link text-white">
                 <i class="bi bi-box-arrow-left"></i>
-                <span>Exit</span>
+                <span>Sair</span>
             </a>
         </div>
     </div>
-
 </aside>

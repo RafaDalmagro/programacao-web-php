@@ -44,7 +44,6 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' ) {
         $endereco = $_POST[ 'endereco' ];
 
         if ( isset( $_POST[ 'inserir' ] ) ) {
-
             if ( cadastrarClienteBD( $conexao, $nome, $email, $senha, $telefone, $endereco ) ) {
                 $_SESSION[ 'mensagem' ] = 'Cliente inserido com sucesso!';
                 $_SESSION[ 'acao_sucesso' ] = true;

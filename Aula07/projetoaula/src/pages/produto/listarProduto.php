@@ -1,12 +1,12 @@
 <?php
 
-if ( session_status() == PHP_SESSION_NONE ) {
-    session_start();
-}
+    if ( session_status() == PHP_SESSION_NONE ) {
+        session_start();
+    }
 
-require '../../actions/produto.php';
+    require '../../actions/produto.php';
 
-$listaProdutos = consultarProdutos();
+    $listaProdutos = consultarProdutos();
 
 ?>
 
@@ -24,28 +24,24 @@ $listaProdutos = consultarProdutos();
         integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
     <link rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css'>
-
-</head>
-
-<body>
-
-    <div class='container'>
-
+        <link rel="stylesheet" href="../../../css/sidebar.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    </head>
+    
+    <body>
+        <?php include('../menus/sidebar.php')?>
+        <div class='container'>
         <div class='row d-flex justify-content-between align-items-center '>
             <h1>Lista de Produtos</h1>
-
             <a href='./inserirProduto.php' class='btn btn-primary'>
                 <i class='bi bi-plus-square'></i>
                 <span>Novo Produto</span>
             </a>
         </div>
-
         <div class='w-100'>
             <?php include( '../../../mensagem.php' )?>
         </div>
-
         <div class='row'>
-
             <table class='table'>
                 <thead>
                     <tr>
@@ -88,9 +84,7 @@ $listaProdutos = consultarProdutos();
     ?>
                 </tbody>
             </table>
-
         </div>
-
     </div>
 
     <!-- Optional JavaScript -->

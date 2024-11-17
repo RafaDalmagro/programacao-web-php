@@ -20,34 +20,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../css/sidebar.css">
     <link rel="stylesheet" href="../../../css/style.css">
-
 </head>
 
 <body>
-
     <?php include('../menus/sidebar.php')?>
-    
     <div class="container">
-
         <div class="row d-flex justify-content-between align-items-center">
             <h1>Listar Clientes</h1>
             <a href="./inserirCliente.php" type="button" class="btn btn-primary mb-4 mt-4">
                 <i class="bi bi-plus-square"></i>
                 <span> Novo Cliente</span>
             </a>
-
         </div>
-
         <div class="w-100">
             <?php include('../../../mensagem.php')?>
         </div>
-
-        <!-- b4 default -->
         <table class="table">
             <thead>
                 <tr>
